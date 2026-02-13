@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card" id="card">
+        <!-- Cover / Open Surprise -->
+        <div class="section cover active" id="cover">
+            <h1>💌 A Valentine's Surprise for You 💌</h1>
+            <button class="btn pulse" id="openBtn">Open Me</button>
+        </div>
+
+        <!-- Game Section (3 levels, each with its own cafe picture) -->
+        <div class="section game" id="game">
+            <h2>Guess the Cafe - Level <span id="level">1</span>/3</h2>
+            <div class="game-image">
+                <img id="cafeImg" src="images/kaffee.jpg" alt="Cafe picture">
+            </div>
+            <div class="options" id="options">
+                <button class="option" data-name="Kaffee cafe">Kaffee cafe</button>
+                <button class="option" data-name="Carmelo's cafe">Carmelo's cafe</button>
+                <button class="option" data-name="Tugawe Cove cafe">Tugawe Cove cafe</button>
+            </div>
+            <p id="gameFeedback" class="feedback"></p>
+        </div>
+
+        <!-- Gallery Section (after game) with clickable descriptions -->
+        <div class="section gallery" id="gallery">
+            <h2>Our Memories ❤️</h2>
+            <div class="gallery-grid">
+                <img class="memory-img" data-index="0" src="memory1.jpg" alt="Memory 1">
+                <img class="memory-img" data-index="1" src="memory2.jpg" alt="Memory 2">
+                <img class="memory-img" data-index="2" src="memory3.jpg" alt="Memory 3">
+                <img class="memory-img" data-index="3" src="memory4.jpg" alt="Memory 4">
+                <img class="memory-img" data-index="4" src="memory5.jpg" alt="Memory 5">
+            </div>
+            <div class="description-container">
+                <p id="galleryDesc" class="photo-description">✨ Click on a photo to see the memory ✨</p>
+            </div>
+            <button class="btn" id="toFlashbacksBtn">Next: Flashbacks</button>
+        </div>
+
+        <!-- Flashbacks Section with clickable descriptions -->
+        <div class="section flashbacks" id="flashbacks">
+            <h2>Mini Flashbacks ✨</h2>
+            <div class="flashback-grid">
+                <img class="flashback-img" data-index="0" src="images/memory1.jpg" alt="Flashback 1">
+                <img class="flashback-img" data-index="1" src="images/memory2.jpg" alt="Flashback 2">
+                <img class="flashback-img" data-index="2" src="images/memory3.jpg" alt="Flashback 3">
+                <img class="flashback-img" data-index="3" src="images/memory4.jpg" alt="Flashback 4">
+                <img class="flashback-img" data-index="4" src="images/memory5.jpg" alt="Flashback 5">
+            </div>
+            <div class="description-container">
+                <p id="flashbackDesc" class="photo-description">💭 Click on a flashback to relive the moment 💭</p>
+            </div>
+            <button class="btn" id="toMessageBtn">Next: Message</button>
+        </div>
+
+        <!-- Final Message Section with a cute photo -->
+        <div class="section message" id="message">
+            <h2>For You, My Love 💕</h2>
+            <!-- Medium-sized photo of you two -->
+            <div class="message-photo">
+                <img src="special.jpg" alt="Us" class="cute-photo">
+            </div>
+            <p class="love-note">
+                This is the first photo of you na ako nag picture. so cute! you're eating ice cream. <br>
+                Happy Valentine's Day! ❤️ <br>
+                I love you more than anything, Angela Mae B. Galido ❤️
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
